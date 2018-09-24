@@ -15,17 +15,18 @@ import numpy as np
 #%%
 
 my_data = {'first_name': ['Jason', 'Molly', 'Tina', 'Jake', 'Amy'], 
-        'age': [42, 52, 36, 24, 73], 
+        'age': [42, 52, 23, 38, 73], 
         'RFM_Star': [5, 1, 3, None,2],
-        'AvgSpend': [100, 2.5,57,62, 45]}
+        'AvgSpend': [38, 2.5,5.7,62, 45]}
 
 df = pd.DataFrame(my_data,
                   index=['C1','C2','C3','C4','C5'],
                   columns = ['first_name','age', 'RFM_Star', 'AvgSpend'])
 
 #Exercise uncomment the next lines and check the average of all
-#df.mean(0)
-#df["age"].mean()
+df.mean(0)
+var = df["age"].mean()
+print (var)
 
 
 #Get the mean of the Average Spending
